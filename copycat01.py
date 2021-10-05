@@ -15,7 +15,11 @@ def main():
     shutil.copy("5g_research/sdn_network.txt", "5g_research/sdn_network.txt.copy")
 
     # copy the entire directoryA to directoryB
+#   shutil.copytree("5g_research/", "5g_research_backup/")
+    os.system("rm -rf /home/student/mycode/5g_research_backup/")
     shutil.copytree("5g_research/", "5g_research_backup/")
+
+
 
 if __name__ == "__main__":
     main()
