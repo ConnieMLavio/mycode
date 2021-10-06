@@ -21,7 +21,7 @@ def scan_for_arguments():
   argumentList = sys.argv[1:]
   options      = "v" 
   long_options = ["version"]
-  version      = '1.2'
+  version      = '1.1'
   try:
     arguments, values = getopt.getopt(argumentList, options, long_options)
     for currentArgument, currentValue in arguments:
@@ -29,19 +29,17 @@ def scan_for_arguments():
         print (os.path.basename(sys.argv[0]), version)
   except:
     print("Error 101")
-  sys.exit()
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 def run_git_commands():
   commit_message=input("Commit Comment: ")
   os.chdir("/home/student/mycode/")
   os.system("git add *")
   os.system('git commit -m "'+ commit_message + '"')
+# os.system("git commit -m \"studying for logic\"")
   os.system("git push origin")
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 def main():
   scan_for_arguments()
-#  if len(sys.argv) ==1:
-#    run_git_commands()
   run_git_commands()
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 if __name__ == "__main__":
