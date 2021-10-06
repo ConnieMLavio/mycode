@@ -21,8 +21,7 @@ def scan_for_arguments(git_comment):
   argumentList = sys.argv[1:]
   options      = "c:v" 
   long_options = ["comment","version"]
-  version      = '1.4'
-  input(">>> Beginning command line argument parsing.")
+  version      = '1.3'
   try:
     arguments, values = getopt.getopt(argumentList, options, long_options)
     for currentArgument, currentValue in arguments:
@@ -35,8 +34,7 @@ def scan_for_arguments(git_comment):
   sys.exit()
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 def run_git_commands(git_comment):
- input(">>> Beginning command line argument parsing.") 
- if len(sys.argv) == 1 or git_comment:
+  if len(sys.argv) == 1 or git_comment:
     if bool(git_comment):
       commit_message    = git_comment
     else:
