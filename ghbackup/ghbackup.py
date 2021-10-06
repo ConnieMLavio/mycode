@@ -34,7 +34,7 @@ def run_git_commands():
   os.chdir("/home/student/mycode/")
   os.system("git add *")
   os.system("git commit -m \"studying for logic\"")
-#  os.system("git push origin")
+  os.system("git push origin")
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
 def main():
   scan_for_arguments()
